@@ -3,16 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
-    <nav style={styles.navContainer}>
-      <Link to="/" style={styles.link}>Home</Link>
-      <Link to="../SavedCandidates" style={styles.link}>Potential Candidates</Link>
-    </nav>
-  );
-};
-
-const styles = {
-  navContainer: {
-    position: 'absolute',
+    <nav style={{
+      position: 'absolute',
     top: '20px',
     left: '20px',
     display: 'flex',
@@ -20,7 +12,14 @@ const styles = {
     color: 'white',
     fontSize: '1rem',
     fontWeight: '500',
-  },
+    }}>
+      <Link to="/" style={styles.link}>Home</Link>
+      <Link to="../SavedCandidates" style={styles.link}>Potential Candidates</Link>
+    </nav>
+  );
+};
+
+const styles = {
   link: {
     color: 'white',
     textDecoration: 'none',
